@@ -1,6 +1,3 @@
-
-package com.bridgelabz.workshop.tictactoe;
-
 import java.util.Scanner;
 
 public class TicTacToeGame {
