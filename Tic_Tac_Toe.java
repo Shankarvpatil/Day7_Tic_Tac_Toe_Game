@@ -6,11 +6,10 @@ public class TicTacToeGame {
 	public static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		getBoard();  // call for board
-		getPlayer();  // call for option
+		getBoard();
+		getPlayer();
 	}
 	
-	// method for board 
 	 static void getBoard() {
 		 for (int i = 0; i < 10; i++) {
 			 board[i] = '-';
