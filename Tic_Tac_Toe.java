@@ -6,7 +6,7 @@ public class TicTacTaoGame {
 	Scanner scanner;
 	static char[] board = new char[10];
 	boolean empty = true;
-	static String player, computer, playersign, computorsign;
+	static String player, computer, playersign, computersign;
 
 	public TicTacTaoGame() {
 		scanner = new Scanner(System.in);
@@ -26,11 +26,11 @@ public class TicTacTaoGame {
 			String choice = getCharValue() ;
 			if(choice == "1" || choice == "x") {
 				playersign = "X";
-				computorsign = "O";
+				computersign = "O";
 			}
 			else if(choice == "2" || choice == "o") {
 				playersign = "O";
-				computorsign = "x";
+				computersign = "x";
 			}
 			else {
 				sign = true;
