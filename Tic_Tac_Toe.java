@@ -1,15 +1,14 @@
-package com.bridgelabz.workshop.tictactoe;
+package com.Bridglabz.programs;
 
-public class TicTacToeGame {
+import java.util.Scanner;
+
+public class TicTacTaoGame {
+	Scanner scanner;
 	static char[] board = new char[10];
+	boolean empty = true;
+	static String player, computer, playersign, computersign;
 
-	public static void main(String[] args) {
-		System.out.println("Welcome to Tic Tac Toe");
-		
+	public TicTacTaoGame() {
+		scanner = new Scanner(System.in);
 	}
-	static void getBoard() {
-        for(int i=0; i<10; i++) {
-            board[i]=' ';
-        }
-    }
 }
