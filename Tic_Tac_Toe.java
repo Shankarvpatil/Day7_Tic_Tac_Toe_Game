@@ -1,7 +1,11 @@
 
+package com.Bridglabz.programs;
+
 import java.util.Scanner;
 
-public class TicTacToeGame {
+
+public class TicTacTaoGame {
+	Scanner scanner;
 	static char[] board = new char[10];
 	static char player,computer;
 	public static Scanner scanner = new Scanner(System.in);
