@@ -1,41 +1,32 @@
-package com.Bridglabz.programs;
+package com.bridgelabz.workshop.tictactoe;
 
 import java.util.Scanner;
 
-public class TicTacTaoGame {
-	Scanner scanner;
+public class TicTacToeGame {
 	static char[] board = new char[10];
-	boolean empty = true;
-	static String playername, computername, playersign, compsign;
+	static char playerOption,computerOption;
+	public static Scanner scanner = new Scanner(System.in);
 
-	public TicTacTaoGame() {
-		scanner = new Scanner(System.in);
+	public static void main(String[] args) {
+		getBoard();  // call for board
+		getPlayerChoice();  // call for option
 	}
 	
-	public String getCharValue() {
-		return scanner.next();
-	}
-	
-	public void getSigntoPlay() {
-		boolean sign = false;
-		do {
-			
-			System.out.println("Select the Sign to play");
-			System.out.println("1. x");
-			System.out.println("2. O");
-			String choice = getCharValue() ;
-			if(choice == "1" || choice == "x") {
-				playersign = "X";
-				compsign = "O";
-			}
-			else if(choice == "2" || choice == "o") {
-				playersign = "O";
-				compsign = "x";
-			}
-			else {
-				sign = true;
-				System.out.println("Invalid Selection");
-			}
-		}while(sign);
-	}
+	// method for board 
+	 static void getBoard() {
+		 for (int i = 0; i < 10; i++) {
+			 board[i] = '-';
+		 }
+	 }
+	 
+	 // method to choose the option
+	 static void getPlayerChoice() {
+		 System.out.print("Choose an Option x or o : ");
+		 playerOption = scanner.next().charAt(0);
+		 if (playerOption == 'x')
+			 computerOption='o';
+		 else
+			 computerOption ='x';
+		 System.out.println("You Selected : " +playerOption);
+	    }
 }
