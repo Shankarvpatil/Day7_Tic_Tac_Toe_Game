@@ -1,29 +1,41 @@
+package com.Bridglabz.programs;
+
 import java.util.Scanner;
 
-public class TicTacToeGame {
+public class TicTacTaoGame {
+	Scanner scanner;
 	static char[] board = new char[10];
-	static char player,computer;
-	public static Scanner scanner = new Scanner(System.in);
+	boolean empty = true;
+	static String player, computer, playersign, computorsign;
 
-	public static void main(String[] args) {
-		getBoard();
-		getPlayer();
+	public TicTacTaoGame() {
+		scanner = new Scanner(System.in);
 	}
 	
-	 static void getBoard() {
-		 for (int i = 0; i < 10; i++) {
-			 board[i] = '-';
-		 }
-	 }
-	 
-	 // method to choose the option
-	 static void getPlayer() {
-		 System.out.print("Choose an Option x or o : ");
-		 player = scanner.next().charAt(0);
-		 if (player == 'x')
-			 computer='o';
-		 else
-			 computer ='x';
-		 System.out.println("You Selected : " +player);
-	    }
+	public String getCharValue() {
+		return scanner.next();
+	}
+	
+	public void getSigntoPlay() {
+		boolean sign = false;
+		do {
+			
+			System.out.println("Select the Sign to play");
+			System.out.println("1. x");
+			System.out.println("2. O");
+			String choice = getCharValue() ;
+			if(choice == "1" || choice == "x") {
+				playersign = "X";
+				computorsign = "O";
+			}
+			else if(choice == "2" || choice == "o") {
+				playersign = "O";
+				computorsign = "x";
+			}
+			else {
+				sign = true;
+				System.out.println("Invalid Selection");
+			}
+		}while(sign);
+	}
 }
